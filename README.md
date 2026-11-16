@@ -22,9 +22,11 @@ Configured an internet-facing **Application Load Balancer (ALB)** on AWS that ro
 ### 1. Launch the EC2 instances and install httpd
 Launched 3 EC2 instances with HTTP (80) allowed in the security group, then on each one:
 
+```bash
 sudo yum install httpd -y
 sudo systemctl start httpd
 sudo systemctl enable httpd
+```
 
 
 ### 2. Add a different page on each instance
@@ -38,8 +40,10 @@ Each instance serves its own `index.html` from `/var/www/html/` (see [script.txt
 
 For the path rule to work, the login page must be placed in a `login` folder, because the ALB forwards the full path `/login/` to the instance:
 
+```bash
 sudo mkdir -p /var/www/html/login
 sudo nano /var/www/html/login/index.html
+```
 
 ### 3. Create the target groups
 Created two target groups (type: Instance, protocol: HTTP, port 80):
