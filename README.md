@@ -75,7 +75,10 @@ Open the ALB DNS name in a browser:
 | `http://<alb-dns-name>/` | Page from TG-1 (alternates between the two instances on refresh) |
 | `http://<alb-dns-name>/login/` | "ROHIRAT" login page from TG-2 |
 
+**Default-path**
 ![Default path output](04-default-path-output.png)
+![Default path output](05-default-path-output.png)
+**Login-Path**
 ![Login path output](05-login-path-output.png)
 
 
