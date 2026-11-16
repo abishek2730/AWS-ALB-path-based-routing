@@ -79,7 +79,7 @@ Open the ALB DNS name in a browser:
 ![Default path output](04-default-path-output.png)
 ![Default path output](05-default-path-output.png)
 **Login-Path**
-![Login path output](05-login-path-output.png)
+![Login path output](06-login-path-output.png)
 
 
 ## What I Learned
