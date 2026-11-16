@@ -2,8 +2,8 @@
 
 Configured an internet-facing **Application Load Balancer (ALB)** on AWS that routes traffic to different EC2 target groups based on the URL path.
 
--- /login/* is forwarded to **TG-2** (1 instance, login page)
--- Every other path goes to the **default** rule, which forwards to **TG-1** (2 instances, load balanced)
+- /login/* is forwarded to **TG-2** (1 instance, login page)
+- Every other path goes to the **default** rule, which forwards to **TG-1** (2 instances, load balanced)
 
 ## Architecture
 
@@ -43,8 +43,8 @@ sudo nano /var/www/html/login/index.html
 
 ### 3. Create the target groups
 Created two target groups (type: Instance, protocol: HTTP, port 80):
--- **TG-1** with Instance 1 and Instance 2
--- **TG-2** with Instance 3
+- **TG-1** with Instance 1 and Instance 2
+- **TG-2** with Instance 3
 
 ### 4. Create the Application Load Balancer
 Created an internet-facing ALB named `ALB` across two Availability Zones with an HTTP:80 listener, and set the default action to forward to **TG-1**.
@@ -84,7 +84,7 @@ Open the ALB DNS name in a browser:
 
 ## What I Learned
 
--- How an ALB distributes traffic across multiple targets
--- How listener rules are evaluated by priority, with the default rule applied last
--- How to route different URL paths to different target groups
--- How target group health checks decide which instances receive traffic
+- How an ALB distributes traffic across multiple targets
+- How listener rules are evaluated by priority, with the default rule applied last
+- How to route different URL paths to different target groups
+- How target group health checks decide which instances receive traffic
