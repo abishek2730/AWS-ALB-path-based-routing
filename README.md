@@ -7,15 +7,15 @@ Configured an internet-facing **Application Load Balancer (ALB)** on AWS that ro
 
 ## Architecture
 
-| Component             | Details                                      |
-
-| Region                | ap-south-1 (Mumbai)                          |
-| Load balancer         | ALB, Application type, Internet-facing, IPv4 |
-| Availability Zones    | ap-south-1a and ap-south-1b                  |
-| Listener              | HTTP : 80                                    |
-| TG-1 (default)        | 2 EC2 instances, port 80                     |
-| TG-2 (`/login/*`)     | 1 EC2 instance, port 80                      |
-| Web server            | Apache httpd on Amazon Linux                 |
+| Component | Details |
+|---|---|
+| Region | ap-south-1 (Mumbai) |
+| Load balancer | ALB, Application type, Internet-facing, IPv4 |
+| Availability Zones | ap-south-1a and ap-south-1b |
+| Listener | HTTP : 80 |
+| TG-1 (default) | 2 EC2 instances, port 80 |
+| TG-2 (`/login/*`) | 1 EC2 instance, port 80 |
+| Web server | Apache httpd on Amazon Linux |
 
 ## Steps
 
@@ -28,13 +28,13 @@ sudo systemctl enable httpd
 
 
 ### 2. Add a different page on each instance
-Each instance serves its own `index.html` from `/var/www/html/` (see [scripts.txt](scripts.txt)):
+Each instance serves its own `index.html` from `/var/www/html/` (see [script.txt](script.txt)):
 
-| Instance   | Target group | Page shown               |
-
-| Instance 1 | TG-1         | "November 19, 2023" page |
-| Instance 2 | TG-1         | "June 29, 2024" page     |
-| Instance 3 | TG-2         | "ROHIRAT" login page     |
+| Instance | Target group | Page shown |
+|---|---|---|
+| Instance 1 | TG-1 | "November 19, 2023" page |
+| Instance 2 | TG-1 | "June 29, 2024" page |
+| Instance 3 | TG-2 | "ROHIRAT" login page |
 
 For the path rule to work, the login page must be placed in a `login` folder, because the ALB forwards the full path `/login/` to the instance:
 
@@ -70,10 +70,10 @@ All 3 targets show as **Healthy**, with rule 1 routing to TG-2 and the default r
 
 Open the ALB DNS name in a browser:
 
-| URL                            |  Expected result                                                  |
-
-| `http://<alb-dns-name>/`       |  Page from TG-1 (alternates between the two instances on refresh) |
-| `http://<alb-dns-name>/login/` | "ROHIRAT" login page from TG-2                                    |
+| URL | Expected result |
+|---|---|
+| `http://<alb-dns-name>/` | Page from TG-1 (alternates between the two instances on refresh) |
+| `http://<alb-dns-name>/login/` | "ROHIRAT" login page from TG-2 |
 
 ![Default path output](04-default-path-output.png)
 ![Login path output](05-login-path-output.png)
