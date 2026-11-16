@@ -1,0 +1,150 @@
+----------------------login
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin: 0 0 20px;
+        }
+        .image-container {
+            text-align: center;
+        }
+        img {
+            width: 25%;
+            min-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .caption {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>ROHIRAT</h1>
+    <div class="image-container">
+        <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202407/virat-kohli--rohit-sharma-013658445-3x4_0.jpg?VersionId=N1k9dz7d9PDZ8jWtTI6m2sTVLiK3nMnm" alt="Virat Kohli and Rohit Sharma">
+        <div class="caption">This is an image of Virat Kohli and Rohit Sharma.</div>
+    </div>
+</body>
+</html>
+
+
+
+---------1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Display</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 16px;
+    }
+    h1 { margin: 0 0 16px; font-size: 2em; color: #333; }
+    img {
+      max-width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .caption { margin-top: 12px; font-size: 1.2em; color: #555; }
+  </style>
+</head>
+<body>
+  <h1>November 19, 2023</h1>
+  <img src="https://c.files.bbci.co.uk/9FB7/production/_131778804_gettyimages-1802478089.jpg" alt="Example Image">
+  <div class="caption">Beautiful Image Example</div>
+</body>
+</html>
+
+
+
+
+
+
+
+------------------------2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            text-align: center;
+        }
+        img {
+            width: 50%; /* Reduced size to 50% */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .caption {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>June 29, 2024</h1>
+    <div class="image-container">
+        <!-- Display the image from the provided URL -->
+        <img src="https://im.rediff.com/cricket/2024/jun/29rohit-win-bccix.jpg" alt="Rohit Winning Image">
+        <div class="caption">This is an image of Rohit winning the match.</div>
+    </div>
+</body>
+</html>
